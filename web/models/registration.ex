@@ -7,6 +7,6 @@ defmodule Cms.Registration do
 	end
 
 	defp hashed_password(password) do
-		Comeonin.Bcryp.hashpwsalt(password)
+		Comeonin.Bcrypt.hashpwsalt(password)
 	end
 end
