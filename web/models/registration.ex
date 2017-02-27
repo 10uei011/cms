@@ -4,6 +4,7 @@ defmodule Cms.Registration do
 	def create(changeset ,repo) do
 		changeset
 		|> put_change(:crypted_password, hashed_password(changeset.params["password"]))
+		|> repo.insert()
 	end
 
 	defp hashed_password(password) do
